@@ -47,3 +47,39 @@ function my_keydown(e){
         console.log("You pressed right arrow");
     }
 }
+
+function up(){
+    if (rover_y >=0){
+        rover_y = rover_y - 10;
+        console.log("When up arrow is pressed = " = rover_x + " - "+ rover_y);
+        uploadBackground();
+        uploadrover();
+    }
+}
+
+function right(){
+    if (rover_x >=700){
+        rover_x = rover_x + 10;
+        console.log("When up arrow is pressed = " = rover_x + " - "+ rover_y);
+        uploadBackground();
+        uploadrover();
+    }
+}
+
+function down(){
+    if (rover_y <=500){
+        rover_y = rover_y + 10;
+        console.log("When up arrow is pressed = " = rover_x + " - "+ rover_y);
+        uploadBackground();
+        uploadrover();
+    }
+}
+
+function left(){
+    if (rover_x >=0){
+        rover_x = rover_x - 10;
+        console.log("When up arrow is pressed = " = rover_x + " - "+ rover_y);
+        uploadBackground();
+        uploadrover();
+    }
+}
