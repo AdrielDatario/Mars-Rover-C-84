@@ -2,12 +2,20 @@ canvas = document.getElementById("my_Canvas");
 ctx = canvas.getContext("2d");
 rover_width = 100;
 rover_height = 90;
-background_image = "mars.jpg";
+
+nasa_array = ["i1.jpg","i2.jpg","n3,jpg","n4.jpg","n5.jpg","n6.jpg"];
+
+random_number = Math.floor(Math.random() *6 );
+console.log("random_number"+random_number);
+
+background_image = nasa_array[random_number];
+console.log("background_image"+background_image);
+
 rover_image = "rover.png";
 rover_x = 10;
 rover_y = 10;
 
-function add(){
+function adding(){
     background_imgTag = new Image();
     background_imgTag.onload = uploadBackground;
     background_imgTag.src = background_image;
@@ -51,16 +59,16 @@ function my_keydown(e){
 function up(){
     if (rover_y >=0){
         rover_y = rover_y - 10;
-        console.log("When up arrow is pressed = " = rover_x + " - "+ rover_y);
+        console.log("When up arrow is pressed = "+ rover_x + " - "+ rover_y);
         uploadBackground();
         uploadrover();
     }
 }
 
 function right(){
-    if (rover_x >=700){
+    if (rover_x <=700){
         rover_x = rover_x + 10;
-        console.log("When up arrow is pressed = " = rover_x + " - "+ rover_y);
+        console.log("When up arrow is pressed = " + rover_x + " - "+ rover_y);
         uploadBackground();
         uploadrover();
     }
@@ -69,7 +77,7 @@ function right(){
 function down(){
     if (rover_y <=500){
         rover_y = rover_y + 10;
-        console.log("When up arrow is pressed = " = rover_x + " - "+ rover_y);
+        console.log("When up arrow is pressed = " + rover_x + " - "+ rover_y);
         uploadBackground();
         uploadrover();
     }
@@ -78,7 +86,7 @@ function down(){
 function left(){
     if (rover_x >=0){
         rover_x = rover_x - 10;
-        console.log("When up arrow is pressed = " = rover_x + " - "+ rover_y);
+        console.log("When up arrow is pressed = " + rover_x + " - "+ rover_y);
         uploadBackground();
         uploadrover();
     }
